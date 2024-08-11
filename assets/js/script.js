@@ -104,7 +104,7 @@ function showSkills(skills) {
     skillsContainer.innerHTML = skillHTML;
 }
 
-/* function showProjects(projects) {
+ function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
@@ -134,25 +134,25 @@ function showSkills(skills) {
     // <!-- tilt js effect ends --> 
 
     /* ===== SCROLL REVEAL ANIMATION ===== */
-    /* const srtop = ScrollReveal({
+    const srtop = ScrollReveal({
         origin: 'top',
         distance: '80px',
         duration: 1000,
         reset: true
-    }); */
+    }); 
 
     /* SCROLL PROJECTS */
-   /* srtop.reveal('.work .box', { interval: 200 }); 
+   /* srtop.reveal('.work .box', { interval: 200 }); */
 
- } */
+ } 
 
 fetchData().then(data => {
     showSkills(data);
 });
 
-fetchData("projects").then(data => {
+/*fetchData("projects").then(data => {
     showProjects(data);
-});
+});*/
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
